@@ -23,6 +23,7 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateBootstrapLogger();
 Log.Information("-------------{value}-------------", "System Info Begin");
+Log.Information("TokenPay Version: {value}", Assembly.GetExecutingAssembly().GetName().Version);
 Log.Information("Platform: {value}", (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "Linux" :
                     RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ? "OSX" :
                     RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "Windows" : "Unknown"));
