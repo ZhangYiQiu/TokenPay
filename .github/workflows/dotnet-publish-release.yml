@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./src
+        working-directory: ./Src
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET
@@ -35,7 +35,7 @@ jobs:
       with:
         name: app
         if-no-files-found: error
-        path: ${{ github.workspace }}/src/app
+        path: ${{ github.workspace }}/Src/app
 
   create_release:
     name: Create Release
